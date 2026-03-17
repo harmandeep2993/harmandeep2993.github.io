@@ -69,8 +69,8 @@ layout.css and components.css references these variables automatically.
   --text-md:   17px;
 
   /* Heading sizes */
-  --h1: clamp(32px, 3.2vw, 46px);
-  --h2: clamp(28px, 4.5vw, 50px);
+  --h1: clamp(32px, 3.2vw, 50px);
+  --h2: clamp(28px, 4.5vw, 45px);
   --h3: 22px;
   --h4: 19px;
 
