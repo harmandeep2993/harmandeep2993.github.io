@@ -64,8 +64,8 @@ layout.css and components.css references these variables automatically.
 
   /* Font sizes */
   --text-xs:   12px;
-  --text-sm:   13px;
-  --text-base: 15px;
+  --text-sm:   14px;
+  --text-base: 16px;
   --text-md:   17px;
 
   /* Heading sizes */
