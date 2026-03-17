@@ -1,18 +1,8 @@
 /* assets/css/variables.css */
 
-/*
-  DESIGN TOKENS — change colors and fonts here only.
-  Everything else in layout.css and components.css
-  references these variables automatically.
-
-  To switch color scheme:
-    1. Change --accent and related accent vars
-    2. Change --bg, --bg2, --bg3 for background tones
-    3. Done — entire site updates
-
-  Current scheme: Soft White + Indigo
+/* DESIGN TOKENS — change colors and fonts here only. Everything else in 
+layout.css and components.css references these variables automatically.
 */
-
 
 /* Colors */
 
@@ -40,77 +30,8 @@
 }
 
 
-/*
-  PRESET SCHEMES — uncomment one block to switch theme
-  (comment out the block above first)
-*/
-
-/* Amber + Warm White
-:root {
-  --bg:         #FDFBF7;
-  --bg2:        #F5F0E8;
-  --bg3:        #EDE6D6;
-  --card:       #FFFFFF;
-  --text:       #1C1812;
-  --muted:      #7A7060;
-  --accent:     #BA7517;
-  --accent-bg:  #FAEEDA;
-  --accent-mid: #EF9F27;
-  --accent-dk:  #633806;
-  --border:     rgba(186, 117, 23, 0.10);
-  --border2:    rgba(186, 117, 23, 0.20);
-}
-*/
-
-/* Midnight Navy + Mint
-:root {
-  --bg:         #F0FAF6;
-  --bg2:        #E1F5EE;
-  --bg3:        #C8EDE0;
-  --card:       #FFFFFF;
-  --text:       #0F1923;
-  --muted:      #4A7060;
-  --accent:     #1D9E75;
-  --accent-bg:  #E1F5EE;
-  --accent-mid: #5DCAA5;
-  --accent-dk:  #085041;
-  --border:     rgba(29, 158, 117, 0.10);
-  --border2:    rgba(29, 158, 117, 0.20);
-}
-*/
-
-/* Warm Ivory + Terracotta
-:root {
-  --bg:         #FDFAF5;
-  --bg2:        #F5E6DF;
-  --bg3:        #EDD5C8;
-  --card:       #FFFFFF;
-  --text:       #2C1F1A;
-  --muted:      #7A5A50;
-  --accent:     #C44B2B;
-  --accent-bg:  #FAECE7;
-  --accent-mid: #D85A30;
-  --accent-dk:  #712B13;
-  --border:     rgba(196, 75, 43, 0.10);
-  --border2:    rgba(196, 75, 43, 0.20);
-}
-  */
-
-/* Pure Black + Electric Yellow
-:root {
-  --bg:         #F9F8F0;
-  --bg2:        #F0EDD0;
-  --bg3:        #E8E4B8;
-  --card:       #FFFFFF;
-  --text:       #141414;
-  --muted:      #6B6840;
-  --accent:     #C49A0A;
-  --accent-bg:  #FAEEDA;
-  --accent-mid: #EF9F27;
-  --accent-dk:  #7A5C00;
-  --border:     rgba(196, 154, 10, 0.12);
-  --border2:    rgba(196, 154, 10, 0.24);
-}
+/*PRESET SCHEMES
+  Current scheme: Soft White + Indigo
 */
 
 /* Forest Green + Crisp White
@@ -134,26 +55,22 @@
 :root {
 
   /* Font families — swap Google Fonts import in index.html to match */
-  /*--font-heading: 'Cormorant Garamond', Georgia, serif;*/
-  /*--font-body:    'Plus Jakarta Sans', system-ui, sans-serif;*/
+  /*--font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', system-ui, sans-serif;*/
 
-   /* Font families — swap Google Fonts import in index.html to match */
-  /*--font-heading: 'Syne', system-ui, sans-serif;
-  --font-body:    'Outfit', system-ui, sans-serif;*/
-
-    /* Font families — swap Google Fonts import in index.html to match */
+  /* Font families — swap Google Fonts import in index.html to match */
   --font-heading: 'DM Serif Display', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
 
   /* Font sizes */
-  --text-xs:   11px;
+  --text-xs:   12px;
   --text-sm:   13px;
   --text-base: 15px;
   --text-md:   17px;
 
   /* Heading sizes */
-  --h1: clamp(28px, 3.2vw, 46px);
-  --h2: clamp(32px, 4.5vw, 50px);
+  --h1: clamp(32px, 3.2vw, 46px);
+  --h2: clamp(28px, 4.5vw, 50px);
   --h3: 22px;
   --h4: 19px;
 
@@ -200,6 +117,6 @@
 
 :root {
   --transition-fast:   0.15s ease;
-  --transition-normal: 0.2s ease;
+  --transition-normal: 0.25s ease;
   --transition-slow:   0.65s ease;
 }
