@@ -62,6 +62,8 @@ nav {
   color: var(--text);
 }
 
+.accent { color: var(--accent); }
+
 
 /* Hero elements */
 
