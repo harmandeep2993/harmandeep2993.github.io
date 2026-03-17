@@ -1,0 +1,192 @@
+/* assets/css/animations.css */
+
+/*
+  Animations and transitions.
+  Scroll reveal, hover effects, page load, micro-interactions.
+  No colors, no layout — purely motion.
+*/
+
+
+/* Scroll reveal */
+
+.fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition-slow),
+              transform var(--transition-slow);
+}
+
+.fade.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children inside a revealed section */
+
+.fade.on .stagger-1 { transition-delay: 0.05s; }
+.fade.on .stagger-2 { transition-delay: 0.10s; }
+.fade.on .stagger-3 { transition-delay: 0.15s; }
+.fade.on .stagger-4 { transition-delay: 0.20s; }
+.fade.on .stagger-5 { transition-delay: 0.25s; }
+.fade.on .stagger-6 { transition-delay: 0.30s; }
+
+
+/* Hero load animation — fires on page load, no scroll needed */
+
+.hero-pill {
+  animation: slide-down 1.0s ease both;
+  animation-delay: 0.1s;
+}
+
+.hero h1 {
+  animation: slide-up 0.7s ease both;
+  animation-delay: 0.2s;
+}
+
+.hero-sub {
+  animation: slide-up 0.7s ease both;
+  animation-delay: 0.35s;
+}
+
+.hero-actions {
+  animation: slide-up 0.7s ease both;
+  animation-delay: 0.5s;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Pulse dot in hero pill */
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+.hero-pill-dot {
+  animation: blink 2.5s ease-in-out infinite;
+}
+
+
+/* Nav scroll effect — adds shadow when page is scrolled */
+
+nav.scrolled {
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Project card hover */
+
+.proj {
+  will-change: transform;
+}
+
+
+/* Skill card hover border sweep */
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+  border-radius: 0 0 0 0;
+}
+
+.skill-card:hover::after {
+  width: 100%;
+}
+
+
+/* Contact link slide */
+
+.clink {
+  will-change: transform;
+}
+
+
+/* Profile image reveal */
+
+.profile-img {
+  animation: img-reveal 0.8s ease both;
+  animation-delay: 0.3s;
+}
+
+@keyframes img-reveal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Stat card count-up feel on reveal */
+
+.stat {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Badge pulse on wip cards */
+
+.badge-wip {
+  animation: badge-pulse 3s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+
+/* Reduced motion — respects user preference */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .fade {
+    opacity: 1;
+    transform: none;
+  }
+}
